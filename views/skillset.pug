@@ -1,0 +1,7 @@
+section#skillset.section
+    h2 SKILLSET
+    article.skillset
+        each item in skills_docs
+            figure.skill
+                img(src=`assets/skills/${item.logo}`, alt=`${item.title}`)
+                figcaption= item.title

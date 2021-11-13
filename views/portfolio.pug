@@ -1,0 +1,23 @@
+section#portfolio.section
+    h2 PORTFOLIO 
+    a.cv(href="/frankcipriano-cv", target="_blank",rel="noopener") printed 🖨️ version
+    article.projects 
+        each item in portfolio_docs
+            figure.project
+                img(src="assets/skills/github.png", alt=`FrankDev`)
+                figcaption
+                    h3= item.title
+                .project-description
+                    p= item.description
+                    -var tecnologias=``
+                    each tech in item.technologies
+                        -tecnologias+= `✔️${tech}  `
+                    h4 Technologies
+                    p= tecnologias
+                a(href=`${item.repository}`, target="_blank", rel="noopener noreferrer") 
+                    button See Repository
+                -if (item.demo)
+                    a(href=`${item.demo}`, target="_blank", rel="noopener noreferrer") 
+                        button Demo
+
+        

@@ -1,0 +1,5 @@
+{
+    "host0":"mongodb+srv://FrankCipriano:Swordfish19.@websitefrank.1ikam.mongodb.net/myWebsite?retryWrites=true&w=majority",
+    "host1":"127.0.0.1",
+    "database":"myWebsite"
+}

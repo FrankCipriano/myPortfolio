@@ -1,0 +1,13 @@
+section#experience.section
+    h2 EXPERIENCE
+    .experiencias
+        each item in experience_docs 
+            figure.experiencia
+                img(src=`assets/experience/${item.poster}`, alt=`${item.title}`)
+                figcaption
+                    h3= item.title
+                    h5= item.as
+                    //- ul
+                    //-     each ex in item.description 
+                    //-         li= ex
+                    //-         br

@@ -1,0 +1,17 @@
+section#contact.section 
+    h2 CONTACT 
+    form.formulario-contacto
+        legend Let's start your project, send me an email 
+        input(type="text", name="nombre", placeholder="Type your name",title="Tu nombre debe estar compuesto por letras y separados por un espacio", pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\\s]+$",required) 
+        span#nombre.formulario-contacto-error.none Name must only be lettered and separated by a space
+        input(type="email", name="email", placeholder="Type your email",title="Email incorrecto",pattern="^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$", required)
+        span#email.formulario-contacto-error.none Wrong email
+        input(type="text", name="asunto", placeholder="Subject", title="El asunto es requerido", required)
+        span#asunto.formulario-contacto-error.none Subject is required 
+        textarea(name="comentarios", cols="50", rows="5", placeholder="Compose email",title="Tu comentario no debe exceder los 255 caracteres",data-pattern="^.{1,255}$", required)
+        span#comentarios.formulario-contacto-error.none your comment must not be longer than 255 characters 
+        input(type="submit", value="Send")
+        .contacto-loader.none 
+            img(src="assets/ball-triangle.svg", alt="Cargando")
+        .contacto-respuesta.none 
+            p Your mail has been sent.!
